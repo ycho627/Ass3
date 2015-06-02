@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 2</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script language="javascript" type="text/javascript" src="javascript.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("button1.element").click(function(){
+			$("p").css("background", "green");
+		});
+	});
+	
+	$(document).ready(function(){
+		$("button2.element").click(function(){
+			$("p").css("background", "blue");
+		});
+	});
+	
+	$(document).ready(function(){
+		$("button2.element").click(function(){
+			$("p").css("background", "yellow");
+		});
+	});
+	</script>
+  </head>
+  <body>
+    <div id="box">
+      <div id="logo1">
+	  <img src="turnon.png" id="logo" onclick="bulbControl()" width="250" height="130">
+      </div>
+      <div id="logo2">
+	  <img src="turnon.png" id="logo" onclick="bulbControl()" width="250" height="130">
+      </div>
+	  <h1>Infosys 280<br />Assignment 2<br /></h1>
+	  <p class="callout">Good luck for your assignment 2</p>
+      <nav id="mainnav">
+        <ul>
+          <li><a href="pages/index.html">Home</a></li>
+		  <li><a href="http://www.google.com">Google</a></li>
+          <li><a href="http://www.w3schools.com/">W3School</a></li>
+          <li><a href="pages/myAnswer.html">My Answer</a></li>
+        </ul>
+      </nav>
+		<div id="upcom">
+        <h2>Buttons</h2>
+          <p><input type="button" id="button1" value="Question 6(a)"></p>
+		  <p><input type="button" id="button2" value="Question 6(b)"></p>
+		  <p><input type="button" id="button3" value="Question 6(c)"></p>
+        </div>	
+    </div>
+	<Script>
+	function bulbControl()
+	{	
+		if (document.getElementById("logo").getAttribute('src') === 'turnoff.png')
+		{
+			document.getElementById("logo").src="turnon.png"
+		}
+		else
+		{
+			document.getElementById("logo").src="turnoff.png";
+		}
+	}</script>
+  </body>
+</html>
